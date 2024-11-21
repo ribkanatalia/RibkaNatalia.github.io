@@ -1,0 +1,169 @@
+<!DOCTYPE HTML>
+<!--
+	Forty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Ribka Natalia Portfolio</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="landing.html" class="logo"><strong>Other Projects</strong> </a>
+						<nav>
+							<a href="#menu">Menu</a>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<ul class="links">
+							<li><a href="index.html">Home</a></li>
+							<li><a href="landing.html">Projects</a></li>
+							<li><a href="certificate.html">Certificate</a></li>
+							<li><a href="elements.html">About Me</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main" class="alt">
+
+						<!-- One -->
+							<section id="one">
+								<div class="inner">
+									<header class="major">
+										<h1>Diabetes Data Dashboard</h1>
+										<p>with Python and Tableau</p>
+									</header>
+									<span class="image main"><img src="images/diabetes.jpeg" alt="" /></span>
+									<div class="row">
+										<div class="col-6 col-12-small">
+										<h3>Background</h3>
+										<p>This dataset provides detailed medical diagnostic measurements that were collected to predict the onset of diabetes based on several health factors. It consists of 768 records of female patients, each characterized by 8 health-related attributes. The Outcome variable indicates whether the patient has diabetes (1) or not (0).</p>
+									</div>
+									<div class="col-6 col-12-small">
+										<h3>Question to be answer :</h3>
+														<ol>
+															<li>How are the different categories (Glucose, Blood Pressure, BMI, Skin Thickness, etc) distributed across the age groups?</li>
+															<li>Are there any significant trends or patterns in the distribution of these categories over time?</li>
+															<li>Can we identify any patterns or combinations of factors that are associated with a higher risk of diabetes?</li>
+															
+														</ol>
+									</div>
+									<div>
+										<h3>Data Cleaning</h3>
+										<p>We did not find any duplicate or blank data in our dataset; however, there were some instances of <b>null (0) values</b> for 'Glucose', 'Blood Pressure', 'Skin Thickness', 'Insulin', and 'BMI'. After conducting Exploratory Data Analysis, we decided to replace these zero values with the median value for each variable.</p>
+										<div class="box">
+											<div class="row gtr-50 gtr-uniform">
+												<div class="col-4"><span class="image fit"><img src="images/diabetes 1.jpg" alt="" /></span></div>
+												<div class="col-4"><span class="image fit"><img src="images/diabetes 2.jpg" alt="" /></span></div>
+												<div class="col-4"><span class="image fit"><img src="images/diabetes 3.jpg" alt="" /></span></div>
+												<div class="col-4"><span class="image fit"><img src="images/diabetes 4.jpg" alt="" /></span></div>
+											</div>
+										</div>
+									</div>
+									<div>
+										<h3>Exploratory Data Analysis</h3>
+										<p>We created <b>heatmap charts</b> to examine the correlation between each variable. Our analysis revealed that <b>'Insulin'</b> and <b>'Skin Thickness'</b> had the strongest positive correlation, measured at <b>0.44</b>.</p>
+										<p>Additionally, we constructed a <b>boxplot chart</b> to visualize the distribution of each variable. The results indicated that all values, except for <b>'Glucose'</b>, exhibited a non-symmetrical distribution.</p>
+										<div class="box">
+											<div class="row gtr-50 gtr-uniform">
+												<div class="col-6"><span class="image fit"><img src="images/diabetes 5.jpg" alt="" /></span></div>
+												<div class="col-6"><span class="image fit"><img src="images/diabetes 6.jpg" alt="" /></span></div>
+									
+											</div>
+										</div>
+									</div>
+									<div>
+										<h3>Data Visualization</h3>
+										<ul>
+											<li><b>Glucose and Age Correlation</b> : Median glucose levels generally increase with age, peaking at around 140 in the 50-60 age range, indicating a higher diabetes risk for older adults.</li>
+											<li><b>Risk Factors for Diabetes</b> : Higher glucose (median 140), overweight BMI (median 30.5), and elevated blood pressure are strongly associated with diabetes, as shown by the "Indicates Diabetes" group.</li>
+											<li><b>Blood Pressure Impact</b> : High blood pressure appears frequently alongside high glucose levels and is more common in individuals with diabetes, suggesting that blood pressure management could play a role in diabetes prevention.</li>
+											<li><b>Younger Age Group Trends</b> : Younger age groups (20-40) have generally lower median glucose levels and fewer cases of high BMI and blood pressure, correlating with lower diabetes risk in younger participants.</li>
+										</ul>
+										<div><span class="image fit"><img src="images/diabetes 7.jpg" alt="" /></span></div>
+										
+									</div>
+
+									<div class="box">
+										<h3>Recommendation</h3>
+											<ul>
+												<li><b>Monitor and Manage Glucose Levels</b> : Since glucose levels tend to rise with age, regular glucose monitoring is essential, especially for individuals over 50. Lifestyle adjustments like a balanced diet low in refined sugars and regular exercise can help manage glucose levels.</li>
+												<li><b>Maintain a Healthy Weight</b> : Overweight participants show a higher risk of diabetes. Aim for a balanced diet and consistent physical activity to achieve or maintain a healthy BMI. Small weight reductions can significantly improve blood sugar and overall health.</li>
+												<li><b>Control Blood Pressure</b> : High blood pressure appears to be linked to diabetes risk. Regular blood pressure checks, reducing sodium intake, managing stress, and staying physically active can help keep blood pressure within a healthy range.</li>
+												<li><b>Regular Health Screenings</b> : Periodic check-ups for glucose, BMI, blood pressure, and skin thickness are important to catch early signs of risk factors, allowing for timely interventions to prevent or manage diabetes.</li>
+											</ul>
+									</div>
+									
+									
+									<ul class="actions">
+										<li><a href="https://github.com/ribkanatalia/Diabetes_Dataset" class="button primary icon solid fa-search">View Data in GitHub</a></li>
+									</ul>
+								</div>
+							</section>
+
+					</div>
+
+				<!-- Contact -->
+					<section id="contact">
+						<div class="inner">
+							
+							<section class="split">
+								<section>
+									<div class="contact-method">
+										<span class="icon solid alt fa-envelope"></span>
+										<h3>Email</h3>
+										<a href="#">ribka19natalia@gmail.com</a>
+									</div>
+								</section>
+
+								<section>
+									<div class="contact-method">
+										<span class="icon solid alt fa-home"></span>
+										<h3>Address</h3>
+										<span>Jakarta<br />
+										Indonesia</span>
+									</div>
+								</section>
+							</section>
+						</div>
+					</section>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+							<ul class="icons">
+								
+								<li><a href="https://github.com/ribkanatalia" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+								<li><a href="https://www.linkedin.com/in/ribka-natalia-12741a118/" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+							</ul>
+							<ul class="copyright">
+								<li>&copy; 2024 by Ribka Natalia</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
