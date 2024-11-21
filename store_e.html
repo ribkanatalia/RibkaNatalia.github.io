@@ -1,0 +1,197 @@
+<!DOCTYPE HTML>
+<!--
+	Forty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Ribka Natalia Portfolio</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="landing.html" class="logo"><strong>Other Projects</strong> </a>
+						<nav>
+							<a href="#menu">Menu</a>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<ul class="links">
+							<li><a href="index.html">Home</a></li>
+							<li><a href="landing.html">Projects</a></li>
+							<li><a href="certificate.html">Certificate</a></li>
+							<li><a href="elements.html">About Me</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main" class="alt">
+
+						<!-- One -->
+							<section id="one">
+								<div class="inner">
+									<header class="major">
+										<h1>Sales Performance of Store E (KPI)</h1>
+										<p>with MySQL and Power BI</p>
+									</header>
+									<span class="image main"><img src="images/store_e.jpg" alt="" /></span>
+									<div class="row">
+										<div class="col-6 col-12-small">
+										<h3>Background</h3>
+										<p>Store E Transaction Data has 4 datasets namely orders, order_items, payments, and products that contain sales transaction records for the year 2024. This set consists of more than 20,000 transaction records with detailed information about product types, order status, payment methods, total paid, and etc.</p>
+									</div>
+									<div class="col-6 col-12-small">
+										<h3>Question to be answer :</h3>
+														<ol>
+															<li>What is the total sales earned per month?</li>
+															<li>How many total products are sold in our store per month?</li>
+															<li>What is the percentage of orders delivered and orders canceled?</li>
+															<li>What payment methods are most preferred by consumers?</li>
+															<li>What product categories are the best sellers in our store?</li>
+														</ol>
+									</div>
+									
+									<div>
+										<h3>Exploratory Data Analysis</h3>
+												<div>
+													<h4>Table KPI Total Sales & Total Product Sold</h4>
+														<div>
+															<p>To create <b>Total Sales KPI</b>, I take data from the payments table to create a new <b>VIEW</b> containing <b>date</b> (month & year with <b>DATE_FORMAT</b> formula), <b>monthly_sales</b> (using Aggregate Functions <b>SUM</b>), <b>previous_month_sales</b> (using <b>LAG</b>), and <b>MoM_Growth</b> (to calculate the difference of total sales compared to the previous month).</p>
+															<p>I also did the same method to create <b>VIEW</b> table of <b>KPI Total Products Sold</b>, but before that I have to join several tables with the help of <b>JOIN and CTE</b>. After all the tables have become 1, I can only retrieve the <b>date, product_sold_monthly, previous_month_product_sold, and MoM_Growth_product_sold</b>.</p>
+																<div class="row gtr-50 gtr-uniform">
+																	<div class="col-4"><span class="image fit"><img src="images/kpi_total_paid.jpg" alt="" /></span></div>
+																	<div class="col-4"><span class="image fit"><img src="images/kpi_total_product_sold1.png" alt="" /></span></div>
+																	<div class="col-4"><span class="image fit"><img src="images/kpi_total_product_sold2.png" alt="" /></span></div>
+																</div>
+														</div>
+												</div>
+												
+												<div>
+													<h4>Table Order Status Distribution</h4>
+														<div>
+															<p>I created a <b>VIEW data_order</b>  table to view the total order id based on order_status. I retrieve the data from the <b>orders</b>  table.</p>
+															<div class="row gtr-50 gtr-uniform">
+																<div class="col-4" style="padding: 20px"><span class="image fit"><img src="images/order_status.jpg" alt="" /></span></div>
+														
+															</div>
+														</div>
+												</div>
+												
+												<div>
+													<h4>Table Payment Method Distribution</h4>
+														<p>I created a <b>VIEW payment_method</b>  table to view total sales based on payment_method. I retrieve the data from the <b>payments</b>  table.</p>
+														<div class="row gtr-50 gtr-uniform">
+															<div class="col-4" style="padding: 20px"><span class="image fit"><img src="images/payment.jpg" alt="" /></span></div>
+												
+													</div>
+												</div>
+												
+												<div>
+													<h4>Table Category Distribution</h4>
+														<p>I created a <b>VIEW category</b>  table to view total sales and total products sold based on product category. I retrieve the data by joining the four tables using <b>JOIN and CTE</b>.</p>
+														<div class="row gtr-50 gtr-uniform">
+															<div class="col-4" style="padding: 20px"><span class="image fit"><img src="images/category1.jpg" alt="" /></span></div>
+															<div class="col-4" style="padding: 20px"><span class="image fit"><img src="images/category2.jpg" alt="" /></span></div>
+														
+													</div>
+												</div>
+									</div>
+
+										
+
+									<div>
+										<h3>Data Visualization</h3>
+											<ol>
+												<li><b>Total sales reached $18.73M</b>, with a 69.5% monthly sales increase from $4.36M (Previous Month) to $7.39M.</li>
+												<li><b>Total products sold reached 48.39K</b>, with a 72.64% monthly sales increase from 11.15K (Previous Month) to 19.25K.</li>
+												<li><b>More than 70%</b> of transaction IDs are successfully fulfilled, while 20.47% are pending and 5.28% are canceling orders.</li>
+												<li>The preferred payment method for consumers is <b>Credit Cards</b>.</li>
+												<li><b>Food, Clothes, and Books</b> are the product categories that contribute the most based on total sales.</li>
+											</ol>
+										<div><span class="image fit"><img src="images/Tableau_Store_E.jpg" alt="" /></span></div>
+										
+									</div>
+
+									<div class="box">
+										<h3>Recommendation</h3>
+														<ul>
+															<li><b>Reduce Pending Orders</b>: Streamline order fulfillment to improve conversion to Paid or Delivered.</li>
+															<li><b>Promote Alternative Payments</b>: Offer incentives for Bank Transfers and PayPal to diversify payment methods.</li>
+															<li><b>Boost Electronics Sales</b>: Invest in targeted promotions to improve performance in underperforming categories.</li>
+															<li><b>Maintain Growth Momentum</b>: Analyze recent strategies behind sales spikes and replicate them consistently.</li>
+														</ul>
+									</div>
+									
+									
+									
+									<ul class="actions">
+										<li><a href="https://github.com/ribkanatalia/Sales_Performance_Store_E" class="button primary icon solid fa-search">View Data in GitHub</a></li>
+									</ul>
+								</div>
+							</section>
+
+					</div>
+
+				<!-- Contact -->
+					<section id="contact">
+						<div class="inner">
+							
+							<section class="split">
+								<section>
+									<div class="contact-method">
+										<span class="icon solid alt fa-envelope"></span>
+										<h3>Email</h3>
+										<a href="#">ribka19natalia@gmail.com</a>
+									</div>
+								</section>
+
+								<section>
+									<div class="contact-method">
+										<span class="icon solid alt fa-home"></span>
+										<h3>Address</h3>
+										<span>Jakarta<br />
+										Indonesia</span>
+									</div>
+								</section>
+							</section>
+						</div>
+					</section>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+							<ul class="icons">
+								
+								<li><a href="https://github.com/ribkanatalia" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+								<li><a href="https://www.linkedin.com/in/ribka-natalia-12741a118/" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+							</ul>
+							<ul class="copyright">
+								<li>&copy; 2024 by Ribka Natalia</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
